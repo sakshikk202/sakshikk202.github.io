@@ -8,10 +8,12 @@
 </head>
 
 <body>
-  <!-- HEADER (keep pattern same) -->
+  <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
-      <div class="logo">&lt;Portfolio/&gt;</div>
+      <div class="brand">
+        <a href="#home" class="brand-logo">&lt;Portfolio/&gt;</a>
+      </div>
 
       <nav class="nav">
         <a href="#home"># Home</a>
@@ -22,95 +24,114 @@
         <a href="#contact"># Contact</a>
       </nav>
 
-      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        🌙
+      </button>
     </div>
   </header>
 
-  <!-- HERO (keep pattern same) -->
-  <section id="home" class="hero">
-    <div class="container hero-inner">
-      <div class="hero-avatar-wrap">
-        <img class="hero-avatar" src="assets/profile.jpg" alt="Sakshi Khanapure" />
-      </div>
-
-      <h1 class="hero-title">
-        Hi, I'm <span class="accent">Sakshi Khanapure</span>
-      </h1>
-
-      <p class="hero-subtitle">Software Developer & DevOps Engineer</p>
-
-      <div class="hero-actions">
-        <a class="btn primary" href="https://github.com/Sakshikk202" target="_blank" rel="noreferrer">View GitHub</a>
-        <a class="btn ghost" href="assets/resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT (finalized content) -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-
-      <p class="about-text">
-        I’m a software developer with hands-on experience in DevOps and cloud-native systems.
-        I design backend services, automate deployments, and build infrastructure that scales reliably.
-      </p>
-      <p class="about-text">
-        My work combines application development with container orchestration, CI/CD pipelines, and monitoring
-        to ensure systems remain stable, observable, and resilient under load.
-      </p>
-    </div>
-  </section>
-
-  <!-- TECHNICAL SKILLS (3-column grid; NOT circular) -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="section-title">Technical Skills</h2>
-
-      <div class="skills-grid">
-        <div class="card">
-          <h3>Programming Languages</h3>
-          <p>Python, Java, C++, C, Bash, JavaScript</p>
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="avatar-wrap">
+          <img class="avatar" src="assets/profile.jpg" alt="Sakshi Khanapure profile photo" />
         </div>
 
-        <div class="card">
-          <h3>Backend & Frameworks</h3>
-          <p>REST APIs, Microservices, Flask, Django, FastAPI, Node.js</p>
-        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="accent">Sakshi Khanapure</span>
+        </h1>
 
-        <div class="card">
-          <h3>Databases</h3>
-          <p>MongoDB, MySQL, PostgreSQL, Oracle, Neo4j</p>
-        </div>
+        <p class="hero-subtitle">Software Developer & DevOps Engineer</p>
 
-        <div class="card">
-          <h3>Cloud & DevOps</h3>
-          <p>AWS, Docker, Kubernetes, Git, GitHub, CI/CD</p>
-        </div>
-
-        <div class="card">
-          <h3>Data & ML Tools</h3>
-          <p>Apache Spark, PyTorch, LangChain, OpenAI API, Pandas, NumPy</p>
-        </div>
-
-        <div class="card">
-          <h3>Web & OS</h3>
-          <p>React, AngularJS, HTML5, CSS, Firebase, Linux (Ubuntu/CentOS), Windows</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/Sakshikk202" target="_blank" rel="noreferrer">
+            View GitHub
+          </a>
+          <a class="btn btn-secondary" href="assets/resume.pdf" target="_blank" rel="noreferrer">
+            View Resume
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EXPERIENCE (final content; stacked cards format) -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2 class="section-title">Work Experience</h2>
+    <!-- ABOUT + SKILLS (ONE “PAGE” FEEL) -->
+    <section id="about" class="about-skills">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
 
-      <div class="exp-list">
+        <p class="about-text">
+          I’m a software developer with hands-on experience in DevOps and cloud-native systems. I design backend services,
+          automate deployments, and build infrastructure that scales reliably.
+        </p>
+        <p class="about-text">
+          My work combines application development with container orchestration, CI/CD pipelines, and monitoring to ensure
+          systems remain stable, observable, and resilient under load.
+        </p>
+
+        <div class="skills-wrap">
+          <h3 class="sub-title">Technical Skills</h3>
+
+          <!-- 3-column, clean, not clustered -->
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-title">Programming</div>
+              <div class="pill-row">
+                <span class="pill">Python</span>
+                <span class="pill">Java</span>
+                <span class="pill">C/C++</span>
+                <span class="pill">Bash</span>
+                <span class="pill">JavaScript</span>
+                <span class="pill">SQL</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-title">Backend & Data</div>
+              <div class="pill-row">
+                <span class="pill">REST APIs</span>
+                <span class="pill">Microservices</span>
+                <span class="pill">FastAPI</span>
+                <span class="pill">Flask</span>
+                <span class="pill">Node.js</span>
+                <span class="pill">PostgreSQL</span>
+                <span class="pill">MongoDB</span>
+                <span class="pill">MySQL</span>
+                <span class="pill">Neo4j</span>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-title">Cloud, DevOps & Observability</div>
+              <div class="pill-row">
+                <span class="pill">AWS</span>
+                <span class="pill">Docker</span>
+                <span class="pill">Kubernetes</span>
+                <span class="pill">CI/CD</span>
+                <span class="pill">Git</span>
+                <span class="pill">GitHub</span>
+                <span class="pill">Prometheus</span>
+                <span class="pill">Grafana</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-footnote">
+            Tip: we’ll refine this later with exact cloud/tool depth (multi-cloud, IaC, OTel, etc.). For now it’s clean and readable.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+
         <div class="exp-card">
-          <div class="exp-header">
+          <div class="exp-top">
             <div>
-              <h3>Allianz Technologies</h3>
+              <div class="exp-company">Allianz Technologies</div>
               <div class="exp-role">Software Developer</div>
             </div>
             <div class="exp-dates">June 2022 – November 2023</div>
@@ -129,17 +150,16 @@
         </div>
 
         <div class="exp-card">
-          <div class="exp-header">
+          <div class="exp-top">
             <div>
-              <h3>Elata Technologies</h3>
+              <div class="exp-company">Elata Technologies</div>
               <div class="exp-role">Software Engineer Intern</div>
             </div>
             <div class="exp-dates">September 2019 – March 2020</div>
           </div>
 
           <p class="exp-summary">
-            Contributed to full-stack feature development and automation improvements while strengthening code quality
-            and development workflow efficiency.
+            Contributed to full-stack feature development and automation improvements while strengthening code quality and development workflow efficiency.
           </p>
 
           <ul class="exp-bullets">
@@ -149,123 +169,154 @@
           </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS (3 placeholders for now; you’ll update links later) -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
 
-      <div class="projects-grid">
-        <div class="proj-card">
-          <h3>Hybrid Information Retrieval with Knowledge Graphs & LLMs</h3>
-          <p>Built a RAG pipeline using Neo4j + LLMs to improve retrieval quality and context accuracy.</p>
-          <div class="proj-actions">
-            <a class="btn ghost" href="#" onclick="return false;">Demo (Coming Soon)</a>
-            <a class="btn primary" href="#" onclick="return false;">GitHub (Coming Soon)</a>
-          </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-head">
+              <div class="project-title">Hybrid Information Retrieval with Knowledge Graphs & LLMs</div>
+              <div class="project-tags">
+                <span class="tag">RAG</span><span class="tag">Neo4j</span><span class="tag">LangChain</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              Built a hybrid RAG pipeline combining knowledge graphs and vector search to improve answer relevance and retrieval accuracy.
+            </p>
+            <div class="project-actions">
+              <a class="mini-btn" href="#" target="_blank" rel="noreferrer">Demo (later)</a>
+              <a class="mini-btn" href="#" target="_blank" rel="noreferrer">GitHub (later)</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <div class="project-title">ML Systems Reasoning Assistant</div>
+              <div class="project-tags">
+                <span class="tag">MLOps</span><span class="tag">Postgres</span><span class="tag">Observability</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              Built a lightweight assistant to diagnose ML production issues using structured runbooks, checks, and action recommendations.
+            </p>
+            <div class="project-actions">
+              <a class="mini-btn" href="#" target="_blank" rel="noreferrer">Demo (later)</a>
+              <a class="mini-btn" href="#" target="_blank" rel="noreferrer">GitHub (later)</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <div class="project-title">Cloud Automation & Deployment Toolkit</div>
+              <div class="project-tags">
+                <span class="tag">CI/CD</span><span class="tag">Docker</span><span class="tag">K8s</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              Created reusable scripts and pipelines to standardize deployments, reduce manual steps, and improve reliability across environments.
+            </p>
+            <div class="project-actions">
+              <a class="mini-btn" href="#" target="_blank" rel="noreferrer">Demo (later)</a>
+              <a class="mini-btn" href="#" target="_blank" rel="noreferrer">GitHub (later)</a>
+            </div>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <div class="proj-card">
-          <h3>ML Systems Reasoning Assistant</h3>
-          <p>Developed an assistant to diagnose ML production failures with structured checks, causes, and actions.</p>
-          <div class="proj-actions">
-            <a class="btn ghost" href="#" onclick="return false;">Demo (Coming Soon)</a>
-            <a class="btn primary" href="#" onclick="return false;">GitHub (Coming Soon)</a>
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+
+        <div class="edu-grid">
+          <div class="edu-card">
+            <div class="edu-top">
+              <div class="edu-degree">Master of Science in Computer Science</div>
+              <div class="edu-dates">January 2024 – Dec 2025</div>
+            </div>
+            <div class="edu-school">University of Texas at Arlington</div>
+            <div class="edu-gpa">GPA: 3.4/4</div>
           </div>
-        </div>
 
-        <div class="proj-card">
-          <h3>FastAPI + MongoDB CRUD Platform</h3>
-          <p>Built a full-stack CRUD app with search/update/delete flows and persistence using MongoDB.</p>
-          <div class="proj-actions">
-            <a class="btn ghost" href="#" onclick="return false;">Demo (Coming Soon)</a>
-            <a class="btn primary" href="#" onclick="return false;">GitHub (Coming Soon)</a>
+          <div class="edu-card">
+            <div class="edu-top">
+              <div class="edu-degree">Bachelor of Technology in Computer Science</div>
+              <div class="edu-dates">Graduated June 2022</div>
+            </div>
+            <div class="edu-school">Savitribai Phule Pune University</div>
+            <div class="edu-gpa">GPA: 3.4/4</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EDUCATION (keep it this way: two blocks side-by-side) -->
-  <section id="education" class="section">
-    <div class="container">
-      <h2 class="section-title">Education</h2>
-
-      <div class="edu-grid">
-        <div class="edu-card">
-          <h3>Master of Science in Computer Science</h3>
-          <div class="edu-school">University of Texas at Arlington</div>
-          <div class="edu-meta">January 2024 – Dec 2025</div>
-          <div class="edu-meta">GPA: 3.8/4.0</div>
-        </div>
-
-        <div class="edu-card">
-          <h3>Bachelor of Technology in Computer Science</h3>
-          <div class="edu-school">Savitribai Phule Pune University</div>
-          <div class="edu-meta">Graduated June 2022</div>
-          <div class="edu-meta">GPA: 3.4/4</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT (cards, same vibe as experience) -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Reach out</h3>
-
-          <div class="contact-row">
-            <span class="label">Email</span>
-            <a class="value" href="mailto:sakshi.khanapure20@gmail.com">sakshi.khanapure20@gmail.com</a>
-          </div>
-
-          <div class="contact-row">
-            <span class="label">Phone</span>
-            <a class="value" href="tel:+16827040989">+1 (682) 704-0989</a>
-          </div>
-
-          <div class="contact-row">
-            <span class="label">Location</span>
-            <span class="value">Dallas, TX</span>
-          </div>
-        </div>
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
 
         <div class="contact-card">
-          <h3>Links</h3>
-
           <div class="contact-row">
-            <span class="label">LinkedIn</span>
-            <a class="value" href="https://www.linkedin.com/in/sakshi-khanapure/" target="_blank" rel="noreferrer">
-              linkedin.com/in/sakshi-khanapure
-            </a>
+            <span class="contact-label">Email</span>
+            <a class="contact-link" href="mailto:sakshi.khanapure20@gmail.com">sakshi.khanapure20@gmail.com</a>
           </div>
 
           <div class="contact-row">
-            <span class="label">GitHub</span>
-            <a class="value" href="https://github.com/Sakshikk202" target="_blank" rel="noreferrer">
+            <span class="contact-label">Phone</span>
+            <a class="contact-link" href="tel:+16827040989">+1 (682) 704-0989</a>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-label">LinkedIn</span>
+            <a class="contact-link" href="#" target="_blank" rel="noreferrer">Add later</a>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-label">GitHub</span>
+            <a class="contact-link" href="https://github.com/Sakshikk202" target="_blank" rel="noreferrer">
               github.com/Sakshikk202
             </a>
           </div>
-
-          <div class="contact-actions">
-            <a class="btn primary" href="assets/resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
-            <a class="btn ghost" href="https://github.com/Sakshikk202" target="_blank" rel="noreferrer">View GitHub</a>
-          </div>
         </div>
+
+        <p class="contact-footnote">
+          We’ll polish links + add demo buttons later. This is stable and deployable now.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Sakshi Khanapure</span>
+        <span class="footer-right">Built with HTML/CSS • GitHub Pages</span>
+      </div>
+    </footer>
+  </main>
 
   <script>
-    // Optional theme toggle (basic)
-    const btn = document.querySelector(".theme-toggle");
-    btn?.addEventListener("click", () => document.body.classList.toggle("dark"));
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Theme toggle (light/dark)
+    const toggle = document.getElementById("themeToggle");
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark") document.body.classList.add("dark");
+
+    function refreshIcon() {
+      toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    }
+    refreshIcon();
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+      refreshIcon();
+    });
   </script>
 </body>
 </html>
