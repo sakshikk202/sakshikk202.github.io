@@ -3,106 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sakshi Khanapure | Portfolio</title>
+  <title>Sakshi Khanapure</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body>
   <!-- HEADER -->
   <header class="header">
-    <div class="container nav">
+    <div class="container header-inner">
       <div class="logo">&lt;Portfolio/&gt;</div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
+
+      <!-- Keep header content same as your reference -->
+      <nav class="nav">
+        <a href="#home"># Home</a>
+        <a href="#about"># About</a>
+        <a href="#projects"># Projects</a>
+        <a href="#experience"># Experience</a>
+        <a href="#education"># Education</a>
+        <a href="#contact"># Contact</a>
       </nav>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
     </div>
   </header>
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <div class="container center">
-
+    <div class="container hero-inner">
       <div class="avatar-wrap">
-        <img class="avatar" src="./assets/profile.jpg" alt="Sakshi Khanapure" />
+        <img class="avatar" src="assets/profile.jpg" alt="Sakshi Khanapure" />
       </div>
 
       <h1 class="hero-title">
-        Hi, I’m <span class="accent">Sakshi Khanapure</span>
+        Hi, I'm <span class="accent">Sakshi Khanapure</span>
       </h1>
 
-      <p class="hero-subtitle">
-        Software Developer & DevOps Engineer
-      </p>
+      <p class="hero-subtitle">Software Developer & DevOps Engineer</p>
 
       <div class="hero-actions">
-        <a class="btn primary"
-           href="https://github.com/YOUR_GITHUB_USERNAME"
-           target="_blank">
+        <!-- FIX: GitHub button -->
+        <a class="btn btn-primary" href="https://github.com/Sakshikk202" target="_blank" rel="noreferrer">
           View GitHub
         </a>
 
-        <a class="btn secondary"
-           href="./assets/resume.pdf"
-           target="_blank">
+        <!-- Resume stays as-is -->
+        <a class="btn btn-secondary" href="assets/resume.pdf" target="_blank" rel="noreferrer">
           View Resume
         </a>
       </div>
-
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
     <div class="container">
-      <h2>About Me</h2>
-
+      <h2 class="section-title">About Me</h2>
       <p class="about-text">
-        I’m a software developer with hands-on experience in DevOps and cloud-native systems. I design backend services, automate deployments, and build infrastructure that scales reliably.
+        I’m a software developer with hands-on experience in DevOps and cloud-native systems. I design backend services,
+        automate deployments, and build infrastructure that scales reliably.
       </p>
-
       <p class="about-text">
-        My work combines application development with container orchestration, CI/CD pipelines, and monitoring to ensure systems remain stable, observable, and resilient under load.
+        My work combines application development with container orchestration, CI/CD pipelines, and monitoring to ensure
+        systems remain stable, observable, and resilient under load.
       </p>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- TECHNICAL SKILLS (FULL SCREEN, 3 COLUMN, NOT CIRCULAR) -->
+  <section class="section skills-section">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Programming</h3>
+          <ul>
+            <li>Python, Java, C/C++</li>
+            <li>Bash, JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Backend</h3>
+          <ul>
+            <li>REST APIs, Microservices</li>
+            <li>FastAPI, Flask, Node.js</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Cloud & DevOps</h3>
+          <ul>
+            <li>AWS / GCP / Azure (basics)</li>
+            <li>Docker, Kubernetes</li>
+            <li>CI/CD, Git/GitHub</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Databases</h3>
+          <ul>
+            <li>Postgres, MongoDB</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Observability</h3>
+          <ul>
+            <li>Prometheus, Grafana</li>
+            <li>Logging + troubleshooting</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>AI / MLOps</h3>
+          <ul>
+            <li>PyTorch, LangChain</li>
+            <li>LLM pipelines (RAG basics)</li>
+            <li>Data tools: Pandas, NumPy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLACEHOLDERS (keep sections, fill later) -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="muted">Coming next.</p>
+    </div>
+  </section>
+
   <section id="experience" class="section">
     <div class="container">
-      <h2>Work Experience</h2>
-
-      <!-- Allianz -->
-      <div class="card">
-        <h3>Allianz Technologies</h3>
-        <p class="role">Software Developer | June 2022 – November 2023</p>
-
-        <p class="summary">
-          Delivered backend automation and AI-driven operational improvements that enhanced deployment efficiency and improved production incident response.
-        </p>
-
-        <ul>
-          <li>Built an LLM-powered log analysis tool to automate error classification and improve incident response efficiency.</li>
-          <li>Developed Python-based backend services and REST APIs, reducing manual processing time by 60%.</li>
-          <li>Containerized applications and implemented monitoring with Prometheus and Grafana to improve system reliability.</li>
-        </ul>
-      </div>
-
-      <!-- Elata -->
-      <div class="card">
-        <h3>Elata Technologies</h3>
-        <p class="role">Software Engineer Intern | September 2019 – March 2020</p>
-
-        <ul>
-          <li>Developed full-stack application features and optimized backend data workflows.</li>
-          <li>Designed normalized database schemas and improved SQL query performance.</li>
-          <li>Built Python and Bash automation scripts and collaborated using Git-based workflows.</li>
-        </ul>
-      </div>
-
+      <h2 class="section-title">Experience</h2>
+      <p class="muted">Coming next.</p>
     </div>
   </section>
 
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <p class="muted">Coming next.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="muted">Coming next.</p>
+    </div>
+  </section>
+
+  <script>
+    // Tiny theme toggle (optional)
+    const btn = document.getElementById("themeToggle");
+    const key = "theme";
+    const current = localStorage.getItem(key);
+    if (current === "dark") document.documentElement.classList.add("dark");
+
+    btn.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      localStorage.setItem(key, document.documentElement.classList.contains("dark") ? "dark" : "light");
+      btn.textContent = document.documentElement.classList.contains("dark") ? "☀️" : "🌙";
+    });
+  </script>
 </body>
 </html>
