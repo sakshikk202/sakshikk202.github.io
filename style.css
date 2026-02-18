@@ -1,407 +1,133 @@
-:root{
-    --bg: #f4f8f7;
-    --card: rgba(255,255,255,0.85);
-    --cardBorder: rgba(0,0,0,0.06);
-    --text: #2b2b2b;
-    --muted: rgba(0,0,0,0.60);
-    --accent: #1f7a64;
-    --shadow: 0 10px 24px rgba(0,0,0,0.07);
-    --radius: 14px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-  body.dark{
-    --bg: #0f1514;
-    --card: rgba(24,33,32,0.85);
-    --cardBorder: rgba(255,255,255,0.08);
-    --text: rgba(255,255,255,0.92);
-    --muted: rgba(255,255,255,0.65);
-    --accent: #2bc4a2;
-    --shadow: 0 10px 24px rgba(0,0,0,0.30);
+  body {
+    font-family: monospace;
+    background: #f4f7f6;
+    color: #333;
   }
   
-  *{ margin:0; padding:0; box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
+  /* HEADER */
   
-  body{
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    background: radial-gradient(1200px 700px at 20% 0%, rgba(31,122,100,0.12), transparent 60%),
-                radial-gradient(900px 600px at 80% 20%, rgba(31,122,100,0.08), transparent 55%),
-                var(--bg);
-    color: var(--text);
-  }
-  
-  a{ color: inherit; }
-  .container{ width: min(1120px, 92%); margin: 0 auto; }
-  
-  .muted{ color: var(--muted); }
-  .small{ font-size: 12px; }
-  
-  /* ================= HEADER ================= */
-  .site-header{
-    position: sticky;
+  .header {
+    width: 100%;
+    padding: 20px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: #f4f7f6;
     top: 0;
-    z-index: 100;
-    background: rgba(255,255,255,0.55);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--cardBorder);
-  }
-  body.dark .site-header{ background: rgba(15,21,20,0.55); }
-  
-  .header-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between; /* FIX: brand left, nav right */
-    gap: 18px;
-    padding: 16px 0;
   }
   
-  .brand{
-    font-weight: 800;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
+  .logo {
+    font-weight: bold;
   }
   
-  .nav{
-    display:flex;
-    align-items:center;
-    gap: 18px;
-    margin-left: auto; /* ensure it stays right */
-    flex-wrap: wrap;
-    justify-content: flex-end;
+  .nav a {
+    text-decoration: none;
+    color: #444;
+    margin-left: 25px;
+    font-size: 14px;
   }
   
-  .nav a{
-    text-decoration:none;
-    font-size: 13px;
-    color: var(--muted);
-    padding: 6px 8px;
-    border-radius: 10px;
+  /* HERO */
+  
+  .hero {
+    height: 100vh;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
-  .nav a:hover{
-    color: var(--text);
-    background: rgba(31,122,100,0.10);
-  }
-  
-  .theme-toggle{
-    border: 1px solid var(--cardBorder);
-    background: var(--card);
-    border-radius: 12px;
-    padding: 8px 10px;
-    cursor: pointer;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.05);
-  }
-  
-  /* ================= HERO ================= */
-  .hero{
-    min-height: 100vh; /* FIX: one full screen */
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding: 60px 0 20px;
-  }
-  
-  .hero-content{
-    text-align:center;
-    padding: 18px 0;
-  }
-  
-  .profile-img{
-    width: 210px;     /* FIX: bigger */
-    height: 210px;
+  .profile-img {
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid rgba(31,122,100,0.12);
-    box-shadow: var(--shadow);
-    margin-bottom: 22px;
+    margin-bottom: 40px;
   }
   
-  .hero h1{
-    font-size: 54px;  /* FIX: bigger */
-    letter-spacing: 0.5px;
+  .hero h1 {
+    font-size: 56px;
     margin-bottom: 10px;
   }
   
-  .hero h1 span{ color: var(--accent); }
-  
-  .hero h2{
-    font-size: 22px;  /* FIX: bigger */
-    font-weight: 500;
-    color: var(--muted);
-    margin-bottom: 22px;
+  .hero h1 span {
+    color: #2f7d68;
   }
   
-  .hero-buttons{
-    display:flex;
-    gap: 14px;
-    justify-content:center;
-    flex-wrap: wrap;
+  .subtitle {
+    margin-bottom: 25px;
   }
   
-  /* Buttons */
-  .btn{
-    display:inline-block;
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn {
     padding: 10px 18px;
-    border-radius: 12px;
-    text-decoration:none;
-    font-size: 14px;
-    border: 1px solid transparent;
-  }
-  
-  .btn.primary{
-    background: var(--accent);
-    color: white;
-    box-shadow: 0 10px 18px rgba(31,122,100,0.20);
-  }
-  
-  .btn.secondary{
-    background: rgba(0,0,0,0.06);
-    color: var(--text);
-    border-color: var(--cardBorder);
-  }
-  body.dark .btn.secondary{ background: rgba(255,255,255,0.10); }
-  
-  /* ================= ABOUT + SKILLS ================= */
-  .about-skills{
-    padding: 40px 0 90px;
-  }
-  
-  .two-col{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-  }
-  
-  .panel{
-    background: var(--card);
-    border: 1px solid var(--cardBorder);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 26px;
-  }
-  
-  .panel h2{
-    font-size: 28px;
-    margin-bottom: 18px;
-  }
-  
-  .panel p{
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 12px;
-  }
-  
-  /* Skills grid (cleaner, less clustered) */
-  .skills-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-  
-  .skill-card{
-    background: rgba(255,255,255,0.70);
-    border: 1px solid var(--cardBorder);
-    border-radius: 12px;
-    padding: 14px;
-  }
-  body.dark .skill-card{ background: rgba(24,33,32,0.70); }
-  
-  .skill-card h3{
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-  
-  .skill-card p{
-    margin: 0;
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.5;
-  }
-  
-  /* ================= SECTIONS ================= */
-  .section{
-    padding: 90px 0;
-  }
-  
-  .section-title{
-    font-size: 32px;
-    margin-bottom: 34px;
-    text-align: center;
-  }
-  
-  /* ================= PROJECTS ================= */
-  .projects-list{
-    display: grid;
-    gap: 16px;
-  }
-  
-  .project-item{
-    background: var(--card);
-    border: 1px solid var(--cardBorder);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 22px;
-  }
-  
-  .project-item h3{
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .project-item ul{
-    padding-left: 18px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-  
-  /* ================= EXPERIENCE ================= */
-  .exp-stack{
-    display: grid;
-    gap: 18px;
-  }
-  
-  .exp-card{
-    background: var(--card);
-    border: 1px solid var(--cardBorder);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 22px;
-  }
-  
-  .exp-top{
-    display:flex;
-    justify-content: space-between;
-    gap: 14px;
-    align-items: flex-start;
-    margin-bottom: 10px;
-  }
-  
-  .exp-card h3{
-    font-size: 18px;
-    margin-bottom: 6px;
-  }
-  
-  .company{
-    color: var(--muted);
-    font-size: 13px;
-  }
-  
-  .dates{
-    color: var(--muted);
-    font-size: 13px;
-    white-space: nowrap;
-  }
-  
-  .summary{
-    color: var(--muted);
-    margin: 10px 0 12px;
-    line-height: 1.6;
-  }
-  
-  .exp-card ul{
-    padding-left: 18px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-  
-  /* ================= EDUCATION ================= */
-  .edu-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr; /* keep 2-column */
-    gap: 18px;
-  }
-  
-  .edu-card{
-    background: var(--card);
-    border: 1px solid var(--cardBorder);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 22px;
-  }
-  
-  .edu-title{
-    display:flex;
-    align-items:center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .edu-title h3{
-    font-size: 16px;
-  }
-  
-  .school{
-    color: var(--muted);
-    margin-bottom: 6px;
-  }
-  
-  .meta{
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 4px;
-  }
-  
-  /* ================= CONTACT ================= */
-  .contact-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-  }
-  
-  .contact-card, .contact-form{
-    background: var(--card);
-    border: 1px solid var(--cardBorder);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 22px;
-  }
-  
-  .contact-lines p{
-    margin: 10px 0;
-    color: var(--muted);
-  }
-  
-  .contact-lines a{
-    color: var(--accent);
+    border-radius: 6px;
     text-decoration: none;
   }
-  .contact-lines a:hover{ text-decoration: underline; }
   
-  .contact-form input,
-  .contact-form textarea{
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px 12px;
-    border-radius: 12px;
-    border: 1px solid var(--cardBorder);
-    background: rgba(255,255,255,0.70);
-    color: var(--text);
-    outline: none;
-  }
-  body.dark .contact-form input,
-  body.dark .contact-form textarea{
-    background: rgba(24,33,32,0.70);
+  .primary {
+    background: #2f7d68;
+    color: white;
   }
   
-  .footer{
-    padding: 35px 0 45px;
-    border-top: 1px solid var(--cardBorder);
+  .secondary {
+    background: #ddd;
+    color: black;
   }
   
-  /* ================= RESPONSIVE ================= */
-  @media (max-width: 900px){
-    .two-col{ grid-template-columns: 1fr; }
-    .skills-grid{ grid-template-columns: 1fr; }
-    .edu-grid{ grid-template-columns: 1fr; }
-    .contact-grid{ grid-template-columns: 1fr; }
-    .hero h1{ font-size: 44px; }
-    .profile-img{ width: 190px; height: 190px; }
+  /* SECTIONS */
+  
+  .section {
+    padding: 100px 80px;
   }
   
-  @media (max-width: 520px){
-    .nav{ gap: 10px; }
-    .nav a{ font-size: 12px; }
-    .hero h1{ font-size: 38px; }
-    .hero h2{ font-size: 18px; }
+  .split {
+    display: flex;
+    gap: 80px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .card-grid {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    flex: 1;
+  }
+  
+  .experience-card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+  }
+  
+  .edu-grid {
+    display: flex;
+    gap: 100px;
+  }
+  
+  .contact {
+    text-align: center;
   }

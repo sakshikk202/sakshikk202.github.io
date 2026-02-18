@@ -3,269 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sakshi Khanapure | Portfolio</title>
+  <title>Sakshi Khanapure</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">&lt;Portfolio/&gt;</div>
 
-      <nav class="nav">
-        <a href="#home"># Home</a>
-        <a href="#about"># About</a>
-        <a href="#projects"># Projects</a>
-        <a href="#experience"># Experience</a>
-        <a href="#education"># Education</a>
-        <a href="#contact"># Contact</a>
-      </nav>
-
-      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
-        🌙
-      </button>
-    </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">&lt;Portfolio/&gt;</div>
+    <nav class="nav">
+      <a href="#home"># Home</a>
+      <a href="#about"># About</a>
+      <a href="#projects"># Projects</a>
+      <a href="#experience"># Experience</a>
+      <a href="#education"># Education</a>
+      <a href="#contact"># Contact</a>
+    </nav>
   </header>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero" id="home">
-    <div class="container hero-content">
-      <img src="assets/profile.jpg" alt="Sakshi Khanapure" class="profile-img" />
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <img src="assets/profile.jpg" class="profile-img" />
+    <h1>Hi, I'm <span>Sakshi Khanapure</span></h1>
+    <p class="subtitle">Software Developer & DevOps Engineer</p>
 
-      <h1>Hi, I'm <span>Sakshi Khanapure</span></h1>
-      <h2>Software Developer & DevOps Engineer</h2>
-
-      <div class="hero-buttons">
-        <a class="btn primary" target="_blank" rel="noreferrer"
-           href="https://github.com/Sakshikk202">View GitHub</a>
-
-        <a class="btn secondary" target="_blank" rel="noreferrer"
-           href="assets/resume.pdf">View Resume</a>
-      </div>
+    <div class="hero-buttons">
+      <a href="https://github.com/Sakshikk202" target="_blank" class="btn primary">View GitHub</a>
+      <a href="assets/resume.pdf" target="_blank" class="btn secondary">View Resume</a>
     </div>
   </section>
 
-  <!-- ================= ABOUT + SKILLS (same page vibe) ================= -->
-  <section class="about-skills" id="about">
-    <div class="container">
-      <div class="two-col">
-        <!-- ABOUT -->
-        <div class="panel">
-          <h2>About Me</h2>
-          <p>
-            I’m a software developer with hands-on experience in DevOps and cloud-native systems.
-            I design backend services, automate deployments, and build infrastructure that scales reliably.
-          </p>
-          <p>
-            My work combines application development with container orchestration, CI/CD pipelines,
-            and monitoring to ensure systems remain stable, observable, and resilient under load.
-          </p>
+  <!-- ABOUT + SKILLS -->
+  <section id="about" class="section split">
+    <div class="about">
+      <h2>About Me</h2>
+      <p>
+        I’m a software developer with hands-on experience in DevOps and cloud-native systems.
+        I design backend services, automate deployments, and build infrastructure that scales reliably.
+      </p>
+      <p>
+        My work combines application development with container orchestration, CI/CD pipelines,
+        and monitoring to ensure systems remain stable, observable, and resilient under load.
+      </p>
+    </div>
+
+    <div class="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <h4>Languages</h4>
+          <p>Python, Java, C++, Bash</p>
         </div>
-
-        <!-- SKILLS (cleaner, not clustered) -->
-        <div class="panel" id="skills">
-          <h2>Technical Skills</h2>
-
-          <div class="skills-grid">
-            <div class="skill-card">
-              <h3>Programming Languages</h3>
-              <p>Python, Java, C++, C, Bash, JavaScript</p>
-            </div>
-
-            <div class="skill-card">
-              <h3>Backend & Frameworks</h3>
-              <p>REST APIs, Microservices, Flask, Django, FastAPI</p>
-            </div>
-
-            <div class="skill-card">
-              <h3>Databases</h3>
-              <p>MongoDB, MySQL, PostgreSQL, Oracle, Neo4j</p>
-            </div>
-
-            <div class="skill-card">
-              <h3>Cloud & DevOps</h3>
-              <p>Docker, Kubernetes, CI/CD, Git, GitHub</p>
-            </div>
-
-            <div class="skill-card">
-              <h3>Data & ML Tools</h3>
-              <p>Apache Spark, PyTorch, LangChain, OpenAI API, Pandas, NumPy</p>
-            </div>
-
-            <div class="skill-card">
-              <h3>Operating Systems</h3>
-              <p>Linux (Ubuntu, CentOS), Windows</p>
-            </div>
-          </div>
+        <div>
+          <h4>Backend</h4>
+          <p>Flask, FastAPI, REST APIs</p>
+        </div>
+        <div>
+          <h4>DevOps</h4>
+          <p>Docker, CI/CD, GitHub</p>
+        </div>
+        <div>
+          <h4>Monitoring</h4>
+          <p>Prometheus, Grafana</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= PROJECTS ================= -->
-  <section class="section" id="projects">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>LLM Log Analysis Tool</h3>
+        <p>AI-powered log classification system that automated production error detection and improved incident response efficiency.</p>
+      </div>
 
-      <!-- simple placeholders, you will add links later -->
-      <div class="projects-list">
-        <div class="project-item">
-          <h3>Hybrid Information Retrieval with Knowledge Graphs & LLMs</h3>
-          <ul>
-            <li>Built a hybrid RAG pipeline combining Neo4j Knowledge Graphs with vector retrieval for contextual Q&A.</li>
-            <li>Implemented entity/relationship extraction and graph-based retrieval to improve answer grounding.</li>
-            <li><span class="muted">Demo + GitHub link: (to be added)</span></li>
-          </ul>
-        </div>
+      <div class="card">
+        <h3>DevOps Automation Pipeline</h3>
+        <p>Built containerized CI/CD workflow integrating monitoring, deployment automation, and performance tracking.</p>
+      </div>
 
-        <div class="project-item">
-          <h3>ML Systems Reasoning Assistant (MLOps)</h3>
-          <ul>
-            <li>Created an assistant to diagnose production ML failures with structured checks, causes, and actions.</li>
-            <li>Designed workflows for debugging drift, data quality, pipeline breaks, and model performance regressions.</li>
-            <li><span class="muted">Demo + GitHub link: (to be added)</span></li>
-          </ul>
-        </div>
-
-        <div class="project-item">
-          <h3>Cloud Automation + Monitoring Sandbox</h3>
-          <ul>
-            <li>Built containerized services and dashboards to validate monitoring, alerting, and deployment workflows.</li>
-            <li>Instrumented metrics and validated system behavior under load using dashboards and alerts.</li>
-            <li><span class="muted">Demo + GitHub link: (to be added)</span></li>
-          </ul>
-        </div>
+      <div class="card">
+        <h3>ML Systems Reasoning Assistant</h3>
+        <p>Designed intelligent system for diagnosing ML production failures using structured reasoning and backend automation.</p>
       </div>
     </div>
   </section>
 
-  <!-- ================= EXPERIENCE ================= -->
-  <section class="section" id="experience">
-    <div class="container">
-      <h2 class="section-title">Work Experience</h2>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <h2>Work Experience</h2>
 
-      <div class="exp-stack">
-        <div class="exp-card">
-          <div class="exp-top">
-            <div>
-              <h3>Software Developer</h3>
-              <p class="company">Allianz Technologies</p>
-            </div>
-            <p class="dates">June 2022 – November 2023</p>
-          </div>
+    <div class="experience-card">
+      <h3>Software Developer</h3>
+      <p class="company">Allianz Technologies</p>
+      <p class="date">June 2022 – November 2023</p>
+      <ul>
+        <li>Built an LLM-powered log analysis tool that automated error classification.</li>
+        <li>Developed Python backend services reducing manual processing by 60%.</li>
+        <li>Implemented Prometheus & Grafana monitoring for system reliability.</li>
+      </ul>
+    </div>
 
-          <p class="summary">
-            Delivered backend automation and AI-driven operational improvements that enhanced deployment efficiency,
-            reduced manual effort, and improved production incident response.
-          </p>
-
-          <ul>
-            <li>Built an LLM-powered log analysis tool that automated error classification and improved incident response efficiency in production environments.</li>
-            <li>Developed Python-based backend services and REST APIs, reducing manual processing time by 60% and streamlining data workflows.</li>
-            <li>Containerized applications and implemented monitoring with Prometheus and Grafana to ensure consistent deployments and improve system reliability.</li>
-          </ul>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-top">
-            <div>
-              <h3>Software Engineer Intern</h3>
-              <p class="company">Elata Technologies</p>
-            </div>
-            <p class="dates">September 2019 – March 2020</p>
-          </div>
-
-          <p class="summary">
-            Contributed to full-stack feature development and automation improvements while strengthening code quality
-            and development workflow efficiency.
-          </p>
-
-          <ul>
-            <li>Developed dynamic web application features and optimized backend data handling for improved performance and scalability.</li>
-            <li>Designed normalized database schemas and optimized SQL queries to enhance query efficiency.</li>
-            <li>Built Python and Bash automation scripts and collaborated through Git-based workflows to improve development productivity and code quality.</li>
-          </ul>
-        </div>
-      </div>
+    <div class="experience-card">
+      <h3>Software Engineer Intern</h3>
+      <p class="company">Elata Technologies</p>
+      <p class="date">September 2019 – March 2020</p>
+      <ul>
+        <li>Developed full-stack features and optimized backend data handling.</li>
+        <li>Designed normalized database schemas and optimized SQL queries.</li>
+        <li>Built Python and Bash automation scripts.</li>
+      </ul>
     </div>
   </section>
 
-  <!-- ================= EDUCATION ================= -->
-  <section class="section" id="education">
-    <div class="container">
-      <h2 class="section-title">Education</h2>
+  <!-- EDUCATION -->
+  <section id="education" class="section edu-grid">
+    <div>
+      <h3>Master of Science in Computer Science</h3>
+      <p>University of Texas at Arlington</p>
+      <p>January 2024 – Dec 2025</p>
+      <p>GPA: 3.8 / 4.0</p>
+    </div>
 
-      <div class="edu-grid">
-        <div class="edu-card">
-          <div class="edu-title">
-            <span class="cap">🎓</span>
-            <h3>Master of Science in Computer Science</h3>
-          </div>
-          <p class="school">University of Texas at Arlington</p>
-          <p class="meta">January 2024 – Dec 2025</p>
-          <p class="meta">GPA: 3.4/4</p>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-title">
-            <span class="cap">🎓</span>
-            <h3>Bachelor’s Degree in Computer Engineering</h3>
-          </div>
-          <p class="school">Savitribai Phule Pune University</p>
-          <p class="meta">Graduated June 2022</p>
-          <p class="meta">GPA: 3.4/4</p>
-        </div>
-      </div>
+    <div>
+      <h3>Bachelor of Engineering in Computer Engineering</h3>
+      <p>Savitribai Phule Pune University</p>
+      <p>Graduated June 2022</p>
+      <p>GPA: 3.4 / 4.0</p>
     </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
-  <section class="section" id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Reach out</h3>
-          <p class="muted">Best way: email or LinkedIn.</p>
-
-          <div class="contact-lines">
-            <p><strong>Email:</strong> <a href="mailto:sakshi.khanapure20@gmail.com">sakshi.khanapure20@gmail.com</a></p>
-            <p><strong>GitHub:</strong> <a target="_blank" rel="noreferrer" href="https://github.com/Sakshikk202">github.com/Sakshikk202</a></p>
-            <p><strong>LinkedIn:</strong> <span class="muted">(add later)</span></p>
-            <p><strong>Location:</strong> Dallas, TX</p>
-          </div>
-        </div>
-
-        <form class="contact-form" onsubmit="return false;">
-          <h3>Quick message</h3>
-          <input type="text" placeholder="Your name" />
-          <input type="email" placeholder="Your email" />
-          <textarea rows="5" placeholder="Your message"></textarea>
-          <button class="btn primary" type="button">Send (placeholder)</button>
-          <p class="muted small">Form is static for now (GitHub Pages). We’ll wire it later.</p>
-        </form>
-      </div>
-    </div>
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Email: sakshi.khanapure20@gmail.com</p>
+    <p>Location: Dallas, TX</p>
+    <p>LinkedIn: linkedin.com/in/sakshi-khanapure</p>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p class="muted small">© <span id="year"></span> Sakshi Khanapure</p>
-    </div>
-  </footer>
-
-  <script>
-    // Year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Simple theme toggle placeholder (optional)
-    const btn = document.querySelector(".theme-toggle");
-    btn.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
-    });
-  </script>
 </body>
 </html>
