@@ -3,145 +3,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sakshi Khanapure</title>
+  <title>Sakshi Khanapure | Portfolio</title>
+
+  <!-- Keep the same “typewriter-ish” vibe -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo">&lt;Portfolio/&gt;</div>
-    <nav class="nav">
-      <a href="#home"># Home</a>
-      <a href="#about"># About</a>
-      <a href="#projects"># Projects</a>
-      <a href="#experience"># Experience</a>
-      <a href="#education"># Education</a>
-      <a href="#contact"># Contact</a>
-    </nav>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#home">&lt;Portfolio/&gt;</a>
+
+      <nav class="nav">
+        <a href="#home"># Home</a>
+        <a href="#about"># About</a>
+        <a href="#projects"># Projects</a>
+        <a href="#experience"># Experience</a>
+        <a href="#education"># Education</a>
+        <a href="#contact"># Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <img src="assets/profile.jpg" class="profile-img" />
-    <h1>Hi, I'm <span>Sakshi Khanapure</span></h1>
-    <p class="subtitle">Software Developer & DevOps Engineer</p>
-
-    <div class="hero-buttons">
-      <a href="https://github.com/Sakshikk202" target="_blank" class="btn primary">View GitHub</a>
-      <a href="assets/resume.pdf" target="_blank" class="btn secondary">View Resume</a>
-    </div>
-  </section>
-
-  <!-- ABOUT + SKILLS -->
-  <section id="about" class="section split">
-    <div class="about">
-      <h2>About Me</h2>
-      <p>
-        I’m a software developer with hands-on experience in DevOps and cloud-native systems.
-        I design backend services, automate deployments, and build infrastructure that scales reliably.
-      </p>
-      <p>
-        My work combines application development with container orchestration, CI/CD pipelines,
-        and monitoring to ensure systems remain stable, observable, and resilient under load.
-      </p>
-    </div>
-
-    <div class="skills">
-      <h2>Technical Skills</h2>
-      <div class="skills-grid">
-        <div>
-          <h4>Languages</h4>
-          <p>Python, Java, C++, Bash</p>
+  <main>
+    <!-- Hero -->
+    <section id="home" class="section hero">
+      <div class="hero-inner">
+        <div class="hero-avatar-wrap">
+          <!-- IMPORTANT: keep this path exactly if your image is in assets/profile.jpg -->
+          <img class="hero-avatar" src="assets/profile.jpg" alt="Sakshi Khanapure" />
         </div>
-        <div>
-          <h4>Backend</h4>
-          <p>Flask, FastAPI, REST APIs</p>
-        </div>
-        <div>
-          <h4>DevOps</h4>
-          <p>Docker, CI/CD, GitHub</p>
-        </div>
-        <div>
-          <h4>Monitoring</h4>
-          <p>Prometheus, Grafana</p>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="accent">Sakshi Khanapure</span>
+        </h1>
+
+        <p class="hero-subtitle">Software Developer &amp; DevOps Engineer</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#" target="_blank" rel="noreferrer">View GitHub</a>
+          <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>LLM Log Analysis Tool</h3>
-        <p>AI-powered log classification system that automated production error detection and improved incident response efficiency.</p>
+    <!-- About + Technical Skills (one “page-style” layout) -->
+    <section id="about" class="section about-skills">
+      <div class="container two-col">
+        <!-- About -->
+        <div class="card">
+          <h2>About Me</h2>
+          <p>
+            I’m a software developer with hands-on experience in DevOps and cloud-native systems. I design backend services,
+            automate deployments, and build infrastructure that scales reliably.
+          </p>
+          <p>
+            My work combines application development with container orchestration, CI/CD pipelines, and monitoring to ensure
+            systems remain stable, observable, and resilient under load, supporting distributed data processing, LLM-driven
+            applications, and reliable model serving in production environments.
+          </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="card">
+          <h2>Technical Skills</h2>
+
+          <div class="skills-grid">
+            <div class="skill-box">
+              <h3>Programming</h3>
+              <p>Python, Go, Java, C++, C, Bash, JavaScript</p>
+            </div>
+
+            <div class="skill-box">
+              <h3>Cloud & DevOps</h3>
+              <p>AWS, Azure, GCP, Docker, Kubernetes, Terraform, CI/CD, Git, GitHub</p>
+            </div>
+
+            <div class="skill-box">
+              <h3>Backend</h3>
+              <p>REST APIs, Microservices, FastAPI, Flask, Django</p>
+            </div>
+
+            <div class="skill-box">
+              <h3>Databases</h3>
+              <p>PostgreSQL, MySQL, MongoDB, Oracle, Neo4j</p>
+            </div>
+
+            <div class="skill-box">
+              <h3>AI & LLM Systems</h3>
+              <p>PyTorch, LangChain, OpenAI API, RAG Architectures, Embeddings</p>
+            </div>
+
+            <div class="skill-box">
+              <h3>Data Engineering</h3>
+              <p>Apache Spark, Pandas, NumPy</p>
+            </div>
+
+            <div class="skill-box">
+              <h3>Observability</h3>
+              <p>Prometheus, Grafana</p>
+            </div>
+
+            <div class="skill-box">
+              <h3>Systems</h3>
+              <p>Linux (Ubuntu, CentOS), Windows</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>DevOps Automation Pipeline</h3>
-        <p>Built containerized CI/CD workflow integrating monitoring, deployment automation, and performance tracking.</p>
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="stack">
+          <div class="card">
+            <h3>Hybrid Information Retrieval with Knowledge Graphs &amp; LLMs</h3>
+            <p>
+              Built a retrieval system combining structured knowledge graphs with LLM-based reasoning to improve accuracy,
+              relevance, and explainability for complex queries.
+            </p>
+            <p class="muted">Demo + GitHub link: (to be added)</p>
+          </div>
+
+          <div class="card">
+            <h3>MLOps Platform for Real-Time Applications</h3>
+            <p>
+              Designed an end-to-end pipeline for model training and deployment with containerized services and production-grade
+              monitoring for reliability and iteration speed.
+            </p>
+            <p class="muted">Demo + GitHub link: (to be added)</p>
+          </div>
+
+          <div class="card">
+            <h3>Backend Automation &amp; Observability Toolkit</h3>
+            <p>
+              Developed backend automation utilities and dashboards to reduce manual operational effort and improve debugging
+              during production incidents.
+            </p>
+            <p class="muted">Demo + GitHub link: (to be added)</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>ML Systems Reasoning Assistant</h3>
-        <p>Designed intelligent system for diagnosing ML production failures using structured reasoning and backend automation.</p>
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+
+        <div class="stack">
+          <div class="card">
+            <div class="meta-row">
+              <div>
+                <h3>Allianz Technologies</h3>
+                <p class="muted">Software Developer</p>
+              </div>
+              <p class="muted">June 2022 – November 2023</p>
+            </div>
+
+            <p class="muted">
+              Delivered backend automation and AI-driven operational improvements that enhanced deployment efficiency, reduced manual effort,
+              and improved production incident response.
+            </p>
+            <ul class="list">
+              <li>Built an LLM-powered log analysis tool that automated error classification and improved incident response efficiency in production environments.</li>
+              <li>Developed Python-based backend services and REST APIs, reducing manual processing time by 60% and streamlining data workflows.</li>
+              <li>Containerized applications and implemented monitoring with Prometheus and Grafana to ensure consistent deployments and improve system reliability.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="meta-row">
+              <div>
+                <h3>Elata Technologies</h3>
+                <p class="muted">Software Engineer Intern</p>
+              </div>
+              <p class="muted">September 2019 – March 2020</p>
+            </div>
+
+            <p class="muted">
+              Contributed to full-stack feature development and automation improvements while strengthening code quality and development workflow efficiency.
+            </p>
+            <ul class="list">
+              <li>Developed dynamic web application features and optimized backend data handling for improved performance and scalability.</li>
+              <li>Designed normalized database schemas and optimized SQL queries to enhance query efficiency.</li>
+              <li>Built Python and Bash automation scripts and collaborated through Git-based workflows to improve development productivity and code quality.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <h2>Work Experience</h2>
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
 
-    <div class="experience-card">
-      <h3>Software Developer</h3>
-      <p class="company">Allianz Technologies</p>
-      <p class="date">June 2022 – November 2023</p>
-      <ul>
-        <li>Built an LLM-powered log analysis tool that automated error classification.</li>
-        <li>Developed Python backend services reducing manual processing by 60%.</li>
-        <li>Implemented Prometheus & Grafana monitoring for system reliability.</li>
-      </ul>
-    </div>
+        <div class="edu-grid">
+          <div class="card">
+            <h3>Master of Science in Computer Science</h3>
+            <p class="muted">University of Texas at Arlington</p>
+            <p class="muted">January 2024 – Dec 2025</p>
+            <p class="muted">GPA: 3.4/4</p>
+          </div>
 
-    <div class="experience-card">
-      <h3>Software Engineer Intern</h3>
-      <p class="company">Elata Technologies</p>
-      <p class="date">September 2019 – March 2020</p>
-      <ul>
-        <li>Developed full-stack features and optimized backend data handling.</li>
-        <li>Designed normalized database schemas and optimized SQL queries.</li>
-        <li>Built Python and Bash automation scripts.</li>
-      </ul>
-    </div>
-  </section>
+          <div class="card">
+            <h3>Bachelor’s in Computer Engineering</h3>
+            <p class="muted">Savitribai Phule Pune University</p>
+            <p class="muted">Graduated June 2022</p>
+            <p class="muted">GPA: 3.4/4</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- EDUCATION -->
-  <section id="education" class="section edu-grid">
-    <div>
-      <h3>Master of Science in Computer Science</h3>
-      <p>University of Texas at Arlington</p>
-      <p>January 2024 – Dec 2025</p>
-      <p>GPA: 3.8 / 4.0</p>
-    </div>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
 
-    <div>
-      <h3>Bachelor of Engineering in Computer Engineering</h3>
-      <p>Savitribai Phule Pune University</p>
-      <p>Graduated June 2022</p>
-      <p>GPA: 3.4 / 4.0</p>
-    </div>
-  </section>
+        <div class="card">
+          <p class="muted">Reach out — I reply fast on email.</p>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <h2>Contact</h2>
-    <p>Email: sakshi.khanapure20@gmail.com</p>
-    <p>Location: Dallas, TX</p>
-    <p>LinkedIn: linkedin.com/in/sakshi-khanapure</p>
-  </section>
+          <div class="contact-grid">
+            <a class="contact-pill" href="mailto:sakshi.khanapure20@gmail.com">📧 sakshi.khanapure20@gmail.com</a>
+            <a class="contact-pill" href="#" target="_blank" rel="noreferrer">💼 LinkedIn</a>
+            <a class="contact-pill" href="#" target="_blank" rel="noreferrer">💻 GitHub</a>
+            <span class="contact-pill">📍 Dallas, TX</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <footer class="footer">
+      <div class="container">
+        <p class="muted">© <span id="year"></span> Sakshi Khanapure</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
