@@ -108,8 +108,8 @@
   }
   
   .profile-img{
-    width: 210px;     /* FIX: bigger */
-    height: 210px;
+    width: 230px;     /* FIX: bigger */
+    height: 230px;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid rgba(31,122,100,0.12);
