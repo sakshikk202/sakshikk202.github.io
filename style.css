@@ -507,3 +507,41 @@
       text-align: center;
     }
   }
+
+  /* ===== Mobile header fix (override) ===== */
+@media (max-width: 768px) {
+
+    /* Force-hide the top nav links on mobile (prevents that stacked mess) */
+    .nav {
+      display: none !important;
+    }
+  
+    /* Make header compact + aligned */
+    .site-header {
+      padding: 10px 0;
+    }
+  
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+  
+    /* Brand should not blow up or push layout */
+    .brand {
+      font-size: 18px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+  
+    /* Keep the theme toggle visible and not overlapping */
+    .theme-toggle {
+      margin-left: auto;
+    }
+  
+    /* Stop weird horizontal overflow */
+    body {
+      overflow-x: hidden;
+    }
+  }
