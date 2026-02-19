@@ -405,3 +405,46 @@
     .hero h1{ font-size: 38px; }
     .hero h2{ font-size: 18px; }
   }
+
+  /* ===== Compact Education + Contact to fit in one page ===== */
+#education.section,
+#contact.section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+#education .section-title,
+#contact .section-title {
+  margin-bottom: 14px;
+}
+
+/* Reduce grid gaps */
+#education .edu-grid,
+#contact .contact-grid {
+  gap: 14px;
+}
+
+/* Make cards smaller */
+#education .edu-card,
+#contact .contact-card,
+#contact .contact-form {
+  padding: 16px;
+}
+
+/* Reduce spacing inside education cards */
+#education .edu-card .meta {
+  margin: 4px 0;
+}
+
+/* Make form compact */
+#contact .contact-form input,
+#contact .contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px 12px;
+}
+
+/* Footer tighter + always shows the copyright text cleanly */
+.footer {
+  padding: 10px 0;
+  margin-top: 10px;
+}
