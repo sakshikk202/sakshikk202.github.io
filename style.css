@@ -545,3 +545,23 @@
       overflow-x: hidden;
     }
   }
+
+  /* ===== FORCE mobile nav OFF (last line override) ===== */
+@media screen and (max-width: 768px) {
+    header .nav,
+    .site-header .nav,
+    nav.nav {
+      display: none !important;
+      visibility: hidden !important;
+      height: 0 !important;
+      overflow: hidden !important;
+    }
+  
+    .header-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+    }
+  
+    body { overflow-x: hidden; }
+  }
