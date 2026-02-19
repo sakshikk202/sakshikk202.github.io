@@ -46,11 +46,11 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT + SKILLS (same page vibe) ================= -->
+  <!-- ================= ABOUT + SKILLS ================= -->
   <section class="about-skills" id="about">
     <div class="container">
       <div class="two-col">
-        <!-- ABOUT -->
+
         <div class="panel">
           <h2>About Me</h2>
           <p>
@@ -69,7 +69,6 @@
           </p>
         </div>
 
-        <!-- SKILLS (cleaner, not clustered) -->
         <div class="panel" id="skills">
           <h2>Technical Skills</h2>
 
@@ -115,6 +114,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -123,50 +123,32 @@
   <section class="section" id="projects">
     <div class="container">
       <h2 class="section-title">Projects</h2>
-  
+
       <div class="projects-list">
         <div class="project-item">
           <h3>Hybrid Information Retrieval with Knowledge Graphs & LLMs</h3>
           <ul>
-            <li>
-              A hybrid AI system that combines Neo4j knowledge graphs with vector-based semantic retrieval to improve contextual question answering.
-            </li>
-            <li>
-              The project integrates structured graph traversal with embedding similarity search to reduce hallucinations and enhance answer grounding in real-world scenarios.
-            </li>
-            <li class="muted">
-              Python • LangChain • Neo4j • OpenAI API • RAG • Graph Databases
-            </li>
+            <li>A hybrid AI system combining Neo4j knowledge graphs with vector-based semantic retrieval.</li>
+            <li>Structured graph traversal + embedding similarity to reduce hallucinations.</li>
+            <li class="muted">Python • LangChain • Neo4j • OpenAI API • RAG • Graph Databases</li>
           </ul>
         </div>
-  
+
         <div class="project-item">
           <h3>ML Systems Reasoning Assistant (MLOps)</h3>
           <ul>
-            <li>
-              An intelligent diagnostic platform designed to analyze production ML failures, including data drift, feature issues, pipeline breaks, and performance regressions.
-            </li>
-            <li>
-              The system runs structured reasoning workflows focused on operational reliability and actionable root cause analysis.
-            </li>
-            <li class="muted">
-              Python • MLOps • Drift Detection • Model Monitoring • Workflow Automation
-            </li>
+            <li>Diagnostic platform for production ML failures and regressions.</li>
+            <li>Structured reasoning workflows for drift and performance analysis.</li>
+            <li class="muted">Python • MLOps • Drift Detection • Model Monitoring • Workflow Automation</li>
           </ul>
         </div>
-  
+
         <div class="project-item">
           <h3>Cloud Automation + Monitoring Sandbox</h3>
           <ul>
-            <li>
-              A production-style backend environment built with containerized services and automated CI/CD pipelines.
-            </li>
-            <li>
-              The project integrates Prometheus and Grafana for observability, enabling metric collection, alert validation, and load testing to simulate real deployment conditions.
-            </li>
-            <li class="muted">
-              Docker • Kubernetes • Terraform • GitHub Actions • Prometheus • Grafana • CI/CD
-            </li>
+            <li>Containerized backend with automated CI/CD pipelines.</li>
+            <li>Prometheus + Grafana for observability and load validation.</li>
+            <li class="muted">Docker • Kubernetes • Terraform • GitHub Actions • Prometheus • Grafana • CI/CD</li>
           </ul>
         </div>
       </div>
@@ -220,13 +202,23 @@
           </div>
         </div>
 
-        <form class="contact-form" onsubmit="return false;">
+        <!-- UPDATED FORM ONLY -->
+        <form class="contact-form"
+              action="https://formspree.io/f/xzdavqpd"
+              method="POST">
+
           <h3>Quick message</h3>
-          <input type="text" placeholder="Your name" />
-          <input type="email" placeholder="Your email" />
-          <textarea rows="5" placeholder="Your message"></textarea>
-          <button class="btn primary" type="button">Send (placeholder)</button>
-          <p class="muted small">Form is static for now (GitHub Pages). We’ll wire it later.</p>
+
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+
+          <input type="hidden" name="_subject" value="New message from portfolio site" />
+          <input type="text" name="_gotcha" style="display:none" />
+
+          <button class="btn primary" type="submit">Send</button>
+          <p class="muted small">Form sends directly to my inbox.</p>
+
         </form>
       </div>
     </div>
@@ -239,10 +231,8 @@
   </footer>
 
   <script>
-    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Simple theme toggle placeholder (optional)
     const btn = document.querySelector(".theme-toggle");
     btn.addEventListener("click", () => {
       document.body.classList.toggle("dark");
