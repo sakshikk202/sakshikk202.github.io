@@ -108,13 +108,13 @@
   }
   
   .profile-img{
-    width: 230px;     /* FIX: bigger */
-    height: 230px;
+    width: 280px;     /* FIX: bigger */
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid rgba(31,122,100,0.12);
     box-shadow: var(--shadow);
-    margin-bottom: 22px;
+    margin-bottom: 30px;
   }
   
   .hero h1{
