@@ -565,3 +565,24 @@
   
     body { overflow-x: hidden; }
   }
+
+  /* ===== Mobile fix: Experience cards should NOT scroll internally ===== */
+@media screen and (max-width: 768px) {
+    #experience .panel,
+    #experience .exp-card,
+    #experience .experience-card,
+    #experience .experience-item,
+    #experience .card {
+      height: auto !important;
+      max-height: none !important;
+      overflow: visible !important;
+    }
+  
+    /* In case the scroll is applied on inner content wrapper */
+    #experience .panel * ,
+    #experience .exp-card * ,
+    #experience .experience-card * ,
+    #experience .experience-item * {
+      max-height: none !important;
+    }
+  }
